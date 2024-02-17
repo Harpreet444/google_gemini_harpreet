@@ -1,0 +1,3 @@
+Streamlite
+google-generativeai
+python-dotenv
