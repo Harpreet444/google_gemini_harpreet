@@ -34,7 +34,7 @@ def model_response(input,img):
     return "No Input Provided"
 
 # Starting streamlit 
-
+st.set_page_config(theme="dark")
 st.set_page_config(page_title="Gemini pro vision")
 st.header("Gemini application")
 input=st.text_input("Question: ",key = "input")
