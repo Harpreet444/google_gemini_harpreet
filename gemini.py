@@ -35,7 +35,7 @@ def model_response(input,img):
 
 # Starting streamlit 
 
-st.set_page_config(page_title="Gemini pro vision")
+st.set_page_config(page_title="Gemini pro vision",theme="dark")
 st.header("Gemini application")
 input=st.text_input("Question: ",key = "input")
 
