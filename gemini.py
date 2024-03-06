@@ -3,11 +3,9 @@
 # python-dotenv to load environment variable
 
 from PIL import Image
-from dotenv import load_dotenv as ld
-ld()   # loading environment variable
+ # loading environment variable
 
 import streamlit as st
-import os
 import google.generativeai as genai
 
 #genai.configure(api_key = os.getenv("GOOGLE_API_KEY"))
