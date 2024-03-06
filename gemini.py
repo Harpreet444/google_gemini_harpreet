@@ -10,7 +10,8 @@ import streamlit as st
 import os
 import google.generativeai as genai
 
-genai.configure(api_key = os.getenv("GOOGLE_API_KEY"))
+#genai.configure(api_key = os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key = st.secrets("GOOGLE_API_KEY"))
 
 # function for loading model and get response
 
