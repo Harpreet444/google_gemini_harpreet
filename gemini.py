@@ -12,7 +12,7 @@ genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 # Function for loading the model and getting a response
 def model_response(input, img):
     if input != "" and img is not None:
-        model = genai.GenerativeModel("gemini-pro-vision")
+        model = genai.GenerativeModel("gemini-1.5-flash")
         response = model.generate_content([input, img])
         return response.text
 
