@@ -56,12 +56,12 @@ if submit and img is None and input == "":
 
 elif submit and img is not None:
     response = model_response(input, img)
-    st.subheader("Model Used: gemini-1.5-flash")
+    st.code("Model Used: gemini-1.5-flash")
     st.subheader("Response:")
     st.write(response)
 
 elif submit and img is None:
     response = model_response(input, None)
-    st.subheader("Model Used: gemini-pro")
+    st.code("Model Used: gemini-pro")
     st.subheader("Response:")
     st.write(response)
