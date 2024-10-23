@@ -8,6 +8,8 @@ from PIL import Image
 import streamlit as st
 import google.generativeai as genai
 
+mod="gemini-1.5-flash"
+
 #genai.configure(api_key = os.getenv("GOOGLE_API_KEY"))
 genai.configure(api_key = st.secrets["GOOGLE_API_KEY"])
 
@@ -20,7 +22,7 @@ def model_response(input,img):
    return response.text
 
   elif input!="" and img == None:
-     model = genai.GenerativeModel("gemini-pro")
+     model = genai.GenerativeModel(mod)
      response =  model.generate_content(input)
      return response.text
   
@@ -57,12 +59,12 @@ if submit and img == None and input == "":
 
 elif submit and img != None:
     response = model_response(input,img)
-    st.subheader("Model Used: gemini-pro-vision")    
+    st.subheader("Model Used:gemini-1.5-flash")    
     st.subheader("Response :")
     st.write(response)
     
 elif submit and img == None:
     response = model_response(input,None)
-    st.subheader("Model Used: gemini-pro")
+    st.code("Model Used: "+mod)
     st.subheader("Response :")
     st.write(response)
